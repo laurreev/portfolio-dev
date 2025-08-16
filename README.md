@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Portfolio Next.js + Docker + Firebase
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +36,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Getting Started with Docker and Firebase
+
+1. Place your Firebase service account key as `firebase-service-account.json` in the project root or a secure folder (do not commit it).
+2. Update `.env.local` with your Firebase project credentials.
+3. Build and run with Docker Compose:
+
+```
+docker-compose up --build
+```
+
+The app will be available at http://localhost:3000
+
+## Docker
+- Uses a named volume `vibecode` for persistent data.
+- `.dockerignore` excludes sensitive and unnecessary files from the image.
+
+## Firebase
+- Firebase config is loaded from environment variables.
+- Example Firebase initialization is in `src/lib/firebase.ts`.
+
+---
+
+**Replace placeholder values in `.env.local` with your actual Firebase project settings.**
